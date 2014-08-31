@@ -15,3 +15,6 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('/chat', function (){
+	return View::make('chat');
+});

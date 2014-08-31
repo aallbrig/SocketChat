@@ -1,0 +1,20 @@
+#chat {
+  height: 300px;
+  overflow-y:auto;
+  background-color: #DDD;
+  padding: 10px;
+}
+#controls {
+  background-color: #234;
+  padding: 10px;
+}
+#names {
+  height: 300px;
+  overflow: scroll; 
+}
+.chatName {
+  color: purple;
+}
+.chatName:after {
+  content: ": ";
+}

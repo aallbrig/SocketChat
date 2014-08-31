@@ -1,0 +1,9 @@
+<html>
+	<head>
+		@yield('styles')
+	</head>
+    <body>
+        @yield('body')
+        @yield('scripts')
+    </body>
+</html>
