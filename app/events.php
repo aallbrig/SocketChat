@@ -36,6 +36,11 @@ Event::listen('app.getPeople', function($client_data){
   echo("type of people list is: " . gettype($people));
   return BrainSocket::message('app.sendPeople', (array)$people);
 });
+Event::listen('app.chatMessage', function($client_data){
+  print_r($client_data);
+  // Strip dangerous HTML characters from chat.
+  $client_data->data->message = trim(preg_replace('/ +/', ' ', preg_replace('/[^A-Za-z0-9 ]/', ' ', urldecode(html_entity_decode(strip_tags($client_data->data->message))))));;
+});
 // generic events
 Event::listen('generic.event',function($client_data){
     return BrainSocket::message('generic.event',array('message'=>'A message from a generic event fired in Laravel!'));

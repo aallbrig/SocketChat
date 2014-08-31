@@ -29,7 +29,7 @@
       </div>
       <div class="col-xs-3">
         <ul id="names" class="list-group">
-          <!-- <li class="list-group-item">Cras justo odio</li> -->
+          <!-- Will be full of people chatting -->
         </ul>
       </div>
     </div>

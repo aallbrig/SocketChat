@@ -30,6 +30,9 @@
         clearInput();
         sendMessage(message);
       });
+      clearBtn.click(function(){
+        clearInput();
+      });
       messageInput.keypress(function(e){
         if(e.which == 13) {
           var message = messageInput.val();
